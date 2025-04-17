@@ -16,9 +16,9 @@
       </tags>
   </entry>
   <entry>
-    <title>1013 数素数</title>
+    <title>1013-数素数</title>
     <url>//2025/04/17/1013-%E6%95%B0%E7%B4%A0%E6%95%B0/</url>
-    <content><![CDATA[<h1 id="1013-数素数"><a href="#1013-数素数" class="headerlink" title="1013-数素数"></a>1013-数素数</h1><p><img src="/.io//image-20250417200401576.png" alt="描述"></p>
+    <content><![CDATA[<h1 id="1013-数素数"><a href="#1013-数素数" class="headerlink" title="1013-数素数"></a>1013-数素数</h1><p><img src="/images/1013-%E6%95%B0%E7%B4%A0%E6%95%B0.png" alt="描述"></p>
 <h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">5 27</span><br></pre></td></tr></table></figure>
 
 <h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">11 13 17 19 23 29 31 37 41 43</span><br><span class="line">47 53 59 61 67 71 73 79 83 89</span><br><span class="line">97 101 103</span><br></pre></td></tr></table></figure>
@@ -29,11 +29,11 @@
 
 
 
-<h2 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h2><figure class="highlight"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><figure class="highlight"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -48,60 +48,52 @@
       </tags>
   </entry>
   <entry>
-    <title>Leetcode刷题</title>
-    <url>/2025/04/17/%E5%88%B7%E9%A2%98/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>语言语法刷题</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Hexo + NexT 搭建个人博客</title>
-    <url>/2025/04/17/Hexo-NexT-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">创建页面</span><br><span class="line">hexo new page page_title</span><br><span class="line">创建文档</span><br><span class="line">hexo new text_title</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="分仓部署"><a href="#分仓部署" class="headerlink" title="分仓部署"></a>分仓部署</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new post &quot;XXX&quot;</span><br><span class="line"># 编辑 markdown 文件</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d     # 部署更新到 GitHub Pages</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;更新笔记：XXX&quot;</span><br><span class="line">git push                           # 推送源码到源码仓库</span><br></pre></td></tr></table></figure>
-
-<h4 id="Linux脚本"><a href="#Linux脚本" class="headerlink" title="Linux脚本"></a>Linux脚本</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;更新博客：$(date &#x27;+%Y-%m-%d %H:%M:%S&#x27;)&quot;</span><br><span class="line">git push</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>运行</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bash blog-update.sh</span><br></pre></td></tr></table></figure>
-
-<h4 id="Windows脚本"><a href="#Windows脚本" class="headerlink" title="Windows脚本"></a>Windows脚本</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">setlocal enabledelayedexpansion</span><br><span class="line"></span><br><span class="line">:: 设置时间戳作为提交信息</span><br><span class="line">for /f %%i in (&#x27;powershell -Command &quot;Get-Date -Format \&quot;yyyy-MM-dd HH:mm:ss\&quot; &quot;&#x27;) do set commit_msg=更新博客：%%i</span><br><span class="line"></span><br><span class="line">echo.</span><br><span class="line">echo ========= 1. 清理 Hexo 缓存 =========</span><br><span class="line">hexo clean || goto error</span><br><span class="line"></span><br><span class="line">echo.</span><br><span class="line">echo ========= 2. 生成静态文件 =========</span><br><span class="line">hexo g || goto error</span><br><span class="line"></span><br><span class="line">echo.</span><br><span class="line">echo ========= 3. 部署到 GitHub Pages =========</span><br><span class="line">hexo d || goto error</span><br><span class="line"></span><br><span class="line">echo.</span><br><span class="line">echo ========= 4. 推送源码到 GitHub =========</span><br><span class="line">git add . || goto error</span><br><span class="line">git commit -m &quot;!commit_msg!&quot; || goto error</span><br><span class="line">git push || goto error</span><br><span class="line"></span><br><span class="line">echo.</span><br><span class="line">echo ✅ 博客部署完成！</span><br><span class="line">goto end</span><br><span class="line"></span><br><span class="line">:error</span><br><span class="line">echo ❌ 出现错误，任务中断，请检查上面日志。</span><br><span class="line">pause</span><br><span class="line">exit /b</span><br><span class="line"></span><br><span class="line">:end</span><br><span class="line">pause</span><br><span class="line">exit</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>将上面内容保存为 <code>blog-update.bat</code>，放在Hexo 博客根目录下（和 <code>_config.yml</code> 同级）</p>
-<p>双击运行即可，也可以在命令行运行 <code>blog-update.bat</code></p>
-<h2 id="图片问题"><a href="#图片问题" class="headerlink" title="图片问题"></a>图片问题</h2><p>这是 Hexo 社区最主流的方式：每篇文章一个文件夹，文章和图片归在一起 ✨</p>
-<hr>
-<h3 id="🚀-步骤如下："><a href="#🚀-步骤如下：" class="headerlink" title="🚀 步骤如下："></a>🚀 步骤如下：</h3><h3 id="①-开启-Asset-文件夹功能"><a href="#①-开启-Asset-文件夹功能" class="headerlink" title="① 开启 Asset 文件夹功能"></a>① 开启 Asset 文件夹功能</h3><p>在 <code>hexo/_config.yml</code> 中加入或确认：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yaml</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">复制编辑</span><br><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure>
-
-<p>然后，写文章的时候用：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bash</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">复制编辑</span><br><span class="line">hexo new post &quot;My-Post&quot;</span><br></pre></td></tr></table></figure>
-
-<p>它会自动创建结构如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bash复制编辑source/_posts/</span><br><span class="line">├── My-Post.md</span><br><span class="line">└── My-Post/           ← 图片放这里</span><br><span class="line">    └── image.png</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="②-插入图片（Markdown）"><a href="#②-插入图片（Markdown）" class="headerlink" title="② 插入图片（Markdown）"></a>② 插入图片（Markdown）</h3><p>在 <code>My-Post.md</code> 中这样引用图片：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">markdown</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">复制编辑</span><br><span class="line">![描述](My-Post/image.png)</span><br></pre></td></tr></table></figure>
-
-<p>或者用 Hexo 自带的 asset_img 标签（需要启用 <code>hexo-renderer</code> 插件）：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">markdown</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">复制编辑</span><br><span class="line">&#123;% asset_img image.png 这是图片描述 %&#125;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="📦-发布时会自动复制图片"><a href="#📦-发布时会自动复制图片" class="headerlink" title="📦 发布时会自动复制图片"></a>📦 发布时会自动复制图片</h2><p>运行 <code>hexo g</code> 或 <code>hexo d</code> 时，Hexo 会自动把 <code>source/_posts/文章名/</code> 里的图片复制到生成目录。</p>
+    <title>&#39;first-blog&#39;</title>
+    <url>/2025/04/17/first-blog/</url>
+    <content><![CDATA[<h1 id="Hello"><a href="#Hello" class="headerlink" title="Hello"></a>Hello</h1><p>this is my first blog</p>
 ]]></content>
       <categories>
         <category>其他</category>
       </categories>
   </entry>
   <entry>
-    <title>&#39;first-blog&#39;</title>
-    <url>/2025/04/17/first-blog/</url>
-    <content><![CDATA[<h1 id="Hello"><a href="#Hello" class="headerlink" title="Hello"></a>Hello</h1><p>this is my first blog</p>
+    <title>Hexo + NexT 搭建个人博客</title>
+    <url>/2025/04/17/Hexo-NexT-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<figure class="highlight actionscript"><table><tr><td class="code"><pre><span class="line">创建页面</span><br><span class="line">hexo <span class="keyword">new</span> page page_title</span><br><span class="line">创建文档</span><br><span class="line">hexo <span class="keyword">new</span> text_title</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="分仓部署"><a href="#分仓部署" class="headerlink" title="分仓部署"></a>分仓部署</h2><figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line">hexo new post <span class="string">&quot;XXX&quot;</span></span><br><span class="line"><span class="meta"># 编辑 markdown 文件</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d     <span class="meta"># 部署更新到 GitHub Pages</span></span><br><span class="line">git <span class="keyword">add</span> .</span><br><span class="line">git commit -m <span class="string">&quot;更新笔记：XXX&quot;</span></span><br><span class="line">git <span class="keyword">push</span>                           <span class="meta"># 推送源码到源码仓库</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Linux脚本"><a href="#Linux脚本" class="headerlink" title="Linux脚本"></a>Linux脚本</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;更新博客：<span class="subst">$(date &#x27;+%Y-%m-%d %H:%M:%S&#x27;)</span>&quot;</span></span><br><span class="line">git push</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>运行</p>
+<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">bash blog-<span class="keyword">update</span>.<span class="keyword">sh</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Windows脚本"><a href="#Windows脚本" class="headerlink" title="Windows脚本"></a>Windows脚本</h4><figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">setlocal</span> enabledelayedexpansion</span><br><span class="line"></span><br><span class="line">:: 设置时间戳作为提交信息</span><br><span class="line"><span class="keyword">for</span> /f <span class="variable">%%i</span> <span class="keyword">in</span> (&#x27;powershell -Command &quot;Get-<span class="built_in">Date</span> -<span class="built_in">Format</span> \&quot;yyyy-MM-dd HH:mm:ss\&quot; &quot;&#x27;) <span class="keyword">do</span> <span class="built_in">set</span> commit_msg=更新博客：<span class="variable">%%i</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="built_in">echo</span> ========= <span class="number">1</span>. 清理 Hexo 缓存 =========</span><br><span class="line">hexo clean || <span class="keyword">goto</span> error</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="built_in">echo</span> ========= <span class="number">2</span>. 生成静态文件 =========</span><br><span class="line">hexo g || <span class="keyword">goto</span> error</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="built_in">echo</span> ========= <span class="number">3</span>. 部署到 GitHub Pages =========</span><br><span class="line">hexo d || <span class="keyword">goto</span> error</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="built_in">echo</span> ========= <span class="number">4</span>. 推送源码到 GitHub =========</span><br><span class="line">git add . || <span class="keyword">goto</span> error</span><br><span class="line">git commit -m &quot;<span class="variable">!commit_msg!</span>&quot; || <span class="keyword">goto</span> error</span><br><span class="line">git push || <span class="keyword">goto</span> error</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="built_in">echo</span> ✅ 博客部署完成！</span><br><span class="line"><span class="keyword">goto</span> end</span><br><span class="line"></span><br><span class="line">:error</span><br><span class="line"><span class="built_in">echo</span> ❌ 出现错误，任务中断，请检查上面日志。</span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span> /b</span><br><span class="line"></span><br><span class="line">:end</span><br><span class="line"><span class="built_in">pause</span></span><br><span class="line"><span class="keyword">exit</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>将上面内容保存为 <code>blog-update.bat</code>，放在Hexo 博客根目录下（和 <code>_config.yml</code> 同级）</p>
+<p>双击运行即可，也可以在命令行运行 <code>blog-update.bat</code></p>
+<h2 id="图片问题"><a href="#图片问题" class="headerlink" title="图片问题"></a>图片问题</h2><p>这是 Hexo 社区最主流的方式：每篇文章一个文件夹，文章和图片归在一起 ✨</p>
+<hr>
+<h3 id="🚀-步骤如下："><a href="#🚀-步骤如下：" class="headerlink" title="🚀 步骤如下："></a>🚀 步骤如下：</h3><h3 id="①-开启-Asset-文件夹功能"><a href="#①-开启-Asset-文件夹功能" class="headerlink" title="① 开启 Asset 文件夹功能"></a>① 开启 Asset 文件夹功能</h3><p>在 <code>hexo/_config.yml</code> 中加入或确认：</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">yaml</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">复制编辑</span><br><span class="line">post_asset_folder: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>然后，写文章的时候用：</p>
+<figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">bash</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">复制编辑</span><br><span class="line">hexo <span class="built_in">new</span> <span class="built_in">post</span> <span class="string">&quot;My-Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>它会自动创建结构如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bash复制编辑<span class="built_in">source</span>/_posts/</span><br><span class="line">├── My-Post.md</span><br><span class="line">└── My-Post/           ← 图片放这里</span><br><span class="line">    └── image.png</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="②-插入图片（Markdown）"><a href="#②-插入图片（Markdown）" class="headerlink" title="② 插入图片（Markdown）"></a>② 插入图片（Markdown）</h3><p>在 <code>My-Post.md</code> 中这样引用图片：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">markdown</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">复制编辑</span><br><span class="line">!<span class="selector-attr">[描述]</span>(My-Post/<span class="selector-tag">image</span><span class="selector-class">.png</span>)</span><br></pre></td></tr></table></figure>
+
+<p>或者用 Hexo 自带的 asset_img 标签（需要启用 <code>hexo-renderer</code> 插件）：</p>
+<figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="language-xml">markdown</span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">复制编辑</span></span><br><span class="line"><span class="language-xml"></span><span class="template-tag">&#123;% <span class="name">asset_img</span> image.png 这是图片描述 %&#125;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="📦-发布时会自动复制图片"><a href="#📦-发布时会自动复制图片" class="headerlink" title="📦 发布时会自动复制图片"></a>📦 发布时会自动复制图片</h2><p>运行 <code>hexo g</code> 或 <code>hexo d</code> 时，Hexo 会自动把 <code>source/_posts/文章名/</code> 里的图片复制到生成目录。</p>
 ]]></content>
       <categories>
         <category>其他</category>
@@ -126,6 +118,14 @@
 ]]></content>
       <categories>
         <category>技术栈</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Leetcode刷题</title>
+    <url>/2025/04/17/%E5%88%B7%E9%A2%98/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>语言语法刷题</category>
       </categories>
   </entry>
   <entry>
