@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Hello World</title>
-    <url>//other/:title/</url>
+    <url>/2025/04/17/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -23,7 +23,7 @@
   </entry>
   <entry>
     <title>&#39;first-blog&#39;</title>
-    <url>//other/:title/</url>
+    <url>/2025/04/17/first-blog/</url>
     <content><![CDATA[<h1 id="Hello"><a href="#Hello" class="headerlink" title="Hello"></a>Hello</h1><p>this is my first blog</p>
 ]]></content>
       <categories>
@@ -32,12 +32,47 @@
   </entry>
   <entry>
     <title>Hexo + NexT 搭建个人博客全记录</title>
-    <url>//tech/:title</url>
+    <url>/2025/04/17/Hexo-NexT-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%85%A8%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">创建页面</span><br><span class="line">hexo new &quot;text_title&quot;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+  </entry>
+  <entry>
+    <title>Leetcode刷题</title>
+    <url>/2025/04/17/%E5%88%B7%E9%A2%98/</url>
+    <content><![CDATA[]]></content>
       <categories>
-        <category>技术</category>
+        <category>语言语法刷题</category>
       </categories>
+  </entry>
+  <entry>
+    <title>1001 害死人不偿命的(3n+1)猜想</title>
+    <url>/2025/04/17/1001-%E5%AE%B3%E6%AD%BB%E4%BA%BA%E4%B8%8D%E5%81%BF%E5%91%BD%E7%9A%84-3n-1-%E7%8C%9C%E6%83%B3/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>语言语法刷题</category>
+        <category>PTA刷题</category>
+        <category>PAT (Basic Level) Practice</category>
+      </categories>
+      <tags>
+        <tag>PTA</tag>
+        <tag>刷题</tag>
+        <tag>PAT (Basic Level) Practice</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>1013 数素数</title>
+    <url>/2025/04/17/1013-%E6%95%B0%E7%B4%A0%E6%95%B0/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>语言语法刷题</category>
+        <category>PTA刷题</category>
+        <category>PAT (Basic Level) Practice</category>
+      </categories>
+      <tags>
+        <tag>PTA</tag>
+        <tag>刷题</tag>
+        <tag>PAT (Basic Level) Practice</tag>
+      </tags>
   </entry>
 </search>
