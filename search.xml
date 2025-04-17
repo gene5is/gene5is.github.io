@@ -16,65 +16,6 @@
       </tags>
   </entry>
   <entry>
-    <title>1013 数素数</title>
-    <url>/2025/04/17/1013-%E6%95%B0%E7%B4%A0%E6%95%B0/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>语言语法刷题</category>
-        <category>PTA刷题</category>
-        <category>PAT (Basic Level) Practice</category>
-      </categories>
-      <tags>
-        <tag>PTA</tag>
-        <tag>刷题</tag>
-        <tag>PAT (Basic Level) Practice</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo + NexT 搭建个人博客</title>
-    <url>/2025/04/17/Hexo-NexT-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">创建页面</span><br><span class="line">hexo new page page_title</span><br><span class="line">创建文档</span><br><span class="line">hexo new text_title</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="分仓部署"><a href="#分仓部署" class="headerlink" title="分仓部署"></a>分仓部署</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new post &quot;XXX&quot;</span><br><span class="line"># 编辑 markdown 文件</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d     # 部署更新到 GitHub Pages</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;更新笔记：XXX&quot;</span><br><span class="line">git push                           # 推送源码到源码仓库</span><br></pre></td></tr></table></figure>
-
-<h4 id="Linux脚本"><a href="#Linux脚本" class="headerlink" title="Linux脚本"></a>Linux脚本</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;更新博客：$(date &#x27;+%Y-%m-%d %H:%M:%S&#x27;)&quot;</span><br><span class="line">git push</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>运行</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bash blog-update.sh</span><br></pre></td></tr></table></figure>
-
-<h4 id="Windows脚本"><a href="#Windows脚本" class="headerlink" title="Windows脚本"></a>Windows脚本</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">setlocal enabledelayedexpansion</span><br><span class="line"></span><br><span class="line">:: 设置时间戳作为提交信息</span><br><span class="line">for /f %%i in (&#x27;powershell -Command &quot;Get-Date -Format \&quot;yyyy-MM-dd HH:mm:ss\&quot; &quot;&#x27;) do set commit_msg=更新博客：%%i</span><br><span class="line"></span><br><span class="line">echo.</span><br><span class="line">echo ========= 1. 清理 Hexo 缓存 =========</span><br><span class="line">hexo clean || goto error</span><br><span class="line"></span><br><span class="line">echo.</span><br><span class="line">echo ========= 2. 生成静态文件 =========</span><br><span class="line">hexo g || goto error</span><br><span class="line"></span><br><span class="line">echo.</span><br><span class="line">echo ========= 3. 部署到 GitHub Pages =========</span><br><span class="line">hexo d || goto error</span><br><span class="line"></span><br><span class="line">echo.</span><br><span class="line">echo ========= 4. 推送源码到 GitHub =========</span><br><span class="line">git add . || goto error</span><br><span class="line">git commit -m &quot;!commit_msg!&quot; || goto error</span><br><span class="line">git push || goto error</span><br><span class="line"></span><br><span class="line">echo.</span><br><span class="line">echo ✅ 博客部署完成！</span><br><span class="line">goto end</span><br><span class="line"></span><br><span class="line">:error</span><br><span class="line">echo ❌ 出现错误，任务中断，请检查上面日志。</span><br><span class="line">pause</span><br><span class="line">exit /b</span><br><span class="line"></span><br><span class="line">:end</span><br><span class="line">pause</span><br><span class="line">exit</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>将上面内容保存为 <code>blog-update.bat</code>，放在Hexo 博客根目录下（和 <code>_config.yml</code> 同级）</p>
-<p>双击运行即可，也可以在命令行运行 <code>blog-update.bat</code></p>
-]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>计算机网络</title>
-    <url>/2025/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>计算机基础</category>
-        <category>计算机网络</category>
-      </categories>
-      <tags>
-        <tag>计算机网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>&#39;first-blog&#39;</title>
-    <url>/2025/04/17/first-blog/</url>
-    <content><![CDATA[<h1 id="Hello"><a href="#Hello" class="headerlink" title="Hello"></a>Hello</h1><p>this is my first blog</p>
-]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Leetcode刷题</title>
     <url>/2025/04/17/%E5%88%B7%E9%A2%98/</url>
     <content><![CDATA[]]></content>
@@ -102,5 +43,81 @@
       <categories>
         <category>技术栈</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Hexo + NexT 搭建个人博客</title>
+    <url>/2025/04/17/Hexo-NexT-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">创建页面</span><br><span class="line">hexo new page page_title</span><br><span class="line">创建文档</span><br><span class="line">hexo new text_title</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="分仓部署"><a href="#分仓部署" class="headerlink" title="分仓部署"></a>分仓部署</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new post &quot;XXX&quot;</span><br><span class="line"># 编辑 markdown 文件</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d     # 部署更新到 GitHub Pages</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;更新笔记：XXX&quot;</span><br><span class="line">git push                           # 推送源码到源码仓库</span><br></pre></td></tr></table></figure>
+
+<h4 id="Linux脚本"><a href="#Linux脚本" class="headerlink" title="Linux脚本"></a>Linux脚本</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;更新博客：$(date &#x27;+%Y-%m-%d %H:%M:%S&#x27;)&quot;</span><br><span class="line">git push</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>运行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bash blog-update.sh</span><br></pre></td></tr></table></figure>
+
+<h4 id="Windows脚本"><a href="#Windows脚本" class="headerlink" title="Windows脚本"></a>Windows脚本</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">setlocal enabledelayedexpansion</span><br><span class="line"></span><br><span class="line">:: 设置时间戳作为提交信息</span><br><span class="line">for /f %%i in (&#x27;powershell -Command &quot;Get-Date -Format \&quot;yyyy-MM-dd HH:mm:ss\&quot; &quot;&#x27;) do set commit_msg=更新博客：%%i</span><br><span class="line"></span><br><span class="line">echo.</span><br><span class="line">echo ========= 1. 清理 Hexo 缓存 =========</span><br><span class="line">hexo clean || goto error</span><br><span class="line"></span><br><span class="line">echo.</span><br><span class="line">echo ========= 2. 生成静态文件 =========</span><br><span class="line">hexo g || goto error</span><br><span class="line"></span><br><span class="line">echo.</span><br><span class="line">echo ========= 3. 部署到 GitHub Pages =========</span><br><span class="line">hexo d || goto error</span><br><span class="line"></span><br><span class="line">echo.</span><br><span class="line">echo ========= 4. 推送源码到 GitHub =========</span><br><span class="line">git add . || goto error</span><br><span class="line">git commit -m &quot;!commit_msg!&quot; || goto error</span><br><span class="line">git push || goto error</span><br><span class="line"></span><br><span class="line">echo.</span><br><span class="line">echo ✅ 博客部署完成！</span><br><span class="line">goto end</span><br><span class="line"></span><br><span class="line">:error</span><br><span class="line">echo ❌ 出现错误，任务中断，请检查上面日志。</span><br><span class="line">pause</span><br><span class="line">exit /b</span><br><span class="line"></span><br><span class="line">:end</span><br><span class="line">pause</span><br><span class="line">exit</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>将上面内容保存为 <code>blog-update.bat</code>，放在Hexo 博客根目录下（和 <code>_config.yml</code> 同级）</p>
+<p>双击运行即可，也可以在命令行运行 <code>blog-update.bat</code></p>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>1013 数素数</title>
+    <url>/2025/04/17/1013-%E6%95%B0%E7%B4%A0%E6%95%B0/</url>
+    <content><![CDATA[<h1 id="1013-数素数"><a href="#1013-数素数" class="headerlink" title="1013-数素数"></a>1013-数素数</h1><p><img src="C:\Users\ASUS\Desktop\blog\blog\source\images\image-20250417200401576.png" alt="image-20250417200401576"></p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">5 27</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">11 13 17 19 23 29 31 37 41 43</span><br><span class="line">47 53 59 61 67 71 73 79 83 89</span><br><span class="line">97 101 103</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>语言语法刷题</category>
+        <category>PTA刷题</category>
+        <category>PAT (Basic Level) Practice</category>
+      </categories>
+      <tags>
+        <tag>PTA</tag>
+        <tag>刷题</tag>
+        <tag>PAT (Basic Level) Practice</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>&#39;first-blog&#39;</title>
+    <url>/2025/04/17/first-blog/</url>
+    <content><![CDATA[<h1 id="Hello"><a href="#Hello" class="headerlink" title="Hello"></a>Hello</h1><p>this is my first blog</p>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>计算机网络</title>
+    <url>/2025/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>计算机基础</category>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
   </entry>
 </search>
